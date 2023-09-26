@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragments.main.password.OTRCode.OTRCodeFragment">
+
+    <TextView
+        android:id="@+id/arrow_back"
+        style="@style/simple_black_text"
+        android:layout_width="@dimen/_18dp"
+        android:layout_height="@dimen/_11dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_26dp"
+        android:background="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_code_exam"
+        style="@style/mega_black_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_270dp"
+        android:text="@string/code_exam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_code_was_sent"
+        style="@style/small_black_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/code_was_sent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_exam" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        style="@style/small_black_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_996_555_99"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_was_sent" />
+
+    <com.fraggjkee.smsconfirmationview.SmsConfirmationView
+        android:id="@+id/sms_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_60dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_number"
+        app:scv_codeLength="6"
+        app:scv_smsDetectionMode="auto"
+        app:scv_symbolBackgroundColor="@color/white"
+        app:scv_symbolBorderColor="@color/grey"
+        app:scv_symbolBorderCornerRadius="@dimen/_16dp"
+        app:scv_symbolBorderWidth="@dimen/_1dp"
+        app:scv_symbolHeight="@dimen/_50dp"
+        app:scv_symbolWidth="@dimen/_50dp"
+        app:scv_symbolsSpacing="@dimen/_10dp" />
+
+    <TextView
+        android:id="@+id/tv_repeat_send"
+        style="@style/small_black_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/repeat_send"
+        app:layout_constraintStart_toStartOf="@id/sms_view"
+        app:layout_constraintTop_toBottomOf="@id/sms_view" />
+
+    <TextView
+        android:id="@+id/tv_time_down"
+        style="@style/small_parl_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/_55"
+        app:layout_constraintStart_toEndOf="@id/tv_repeat_send"
+        app:layout_constraintTop_toBottomOf="@id/sms_view" />
+
+    <TextView
+        android:id="@+id/tv_second"
+        style="@style/small_black_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/second"
+        app:layout_constraintStart_toEndOf="@id/tv_time_down"
+        app:layout_constraintTop_toBottomOf="@id/sms_view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48dp"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_40dp"
+        android:backgroundTint="@color/parlament"
+        android:text="@string/send"
+        android:textSize="@dimen/_16sp"
+        app:cornerRadius="@dimen/_8dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,8 +24,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
@@ -76,7 +75,7 @@ dependencies {
     // Dots indicator dependencies
     implementation("com.tbuonomo:dotsindicator:4.3")
 
-    // Circle imageviews dependencies
+    // Circle imageview dependencies
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
     // Lottie Animation dependencies
@@ -100,8 +99,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
     // Navigation dependencies
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.3")
 
     // Retrofit dependencies
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -140,7 +139,7 @@ dependencies {
     implementation("com.github.fraggjkee:sms-confirmation-view:1.7.1")
 
     // Gson converter dependencies
-    implementation("com.squareup.retrofit2:converter-gson:2.5.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.google.code.gson:gson:2.9.0")
 
     // Event bus dependencies

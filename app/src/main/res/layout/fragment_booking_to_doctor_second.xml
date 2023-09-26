@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragments.main.booking.BookingToDoctorSecondFragment">
+
+    <TextView
+        android:id="@+id/arrow_back"
+        style="@style/simple_black_text"
+        android:layout_width="@dimen/_18dp"
+        android:layout_height="@dimen/_11dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_26dp"
+        android:background="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/simple_black_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:text="@string/register"
+        app:layout_constraintStart_toEndOf="@id/arrow_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arrow_back">
+
+        <TextView
+            android:id="@+id/tv_fio"
+            style="@style/simple_bold_parl_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fio" />
+
+        <EditText
+            android:id="@+id/et_fio"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_58dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@drawable/edit_text_corner"
+            android:hint="@string/name_profile"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/_6dp"
+            android:textColorHint="@color/grey"
+            />
+
+        <TextView
+            android:id="@+id/tv_numberPhone"
+            style="@style/simple_bold_parl_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="@string/Number_of_phone" />
+
+        <EditText
+            android:id="@+id/et_numberOfPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_58dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@drawable/edit_text_corner"
+            android:hint="@string/_996_550_55_55_55"
+            android:inputType="text"
+            android:singleLine="true"
+            android:paddingHorizontal="@dimen/_6dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            />
+
+        <TextView
+            android:id="@+id/tv_describe_your_problem"
+            style="@style/simple_bold_parl_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="@string/Date_of_birthday" />
+
+        <EditText
+            android:id="@+id/et_dateOfBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_58dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@drawable/edit_text_corner"
+            android:drawableEnd="@drawable/layer_list_calendar"
+            android:hint="@string/_01_01_2000"
+            android:paddingHorizontal="@dimen/_20dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:inputType="text"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_gender"
+                style="@style/simple_bold_parl_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24dp"
+                android:text="@string/gender" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/btn_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Male"
+                    android:textAppearance="@style/simple_black_text"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/parlament" />
+
+                <RadioButton
+                    android:id="@+id/btn_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="@string/Female"
+                    android:textAppearance="@style/simple_black_text"
+                    android:textStyle="bold"
+                    app:buttonTint="@color/parlament" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_make_an_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48dp"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_32dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/whatsapp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <include
+        android:id="@+id/include_success_booking"
+        layout="@layout/fragment_booking_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include_failed_booking"
+        layout="@layout/fragment_booking_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
